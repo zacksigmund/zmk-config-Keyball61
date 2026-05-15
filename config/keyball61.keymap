@@ -31,21 +31,21 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp ESC          &kp N1    &kp N2        &kp N3           &kp N4     &kp N5                                   &kp N6       &kp N7  &kp N8     &kp N9   &kp N0    &kp BSPC
-&kp TAB          &kp Q     &kp W         &kp E            &kp R      &kp T                                    &kp Y        &kp U   &kp I      &kp O    &kp P     &kp BACKSLASH
-&lt 6 BACKSPACE  &kp A     &kp S         &kp D            &kp F      &kp G                                    &kp H        &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT   &kp Z     &kp X         &kp C            &kp V      &kp B            &trans     &trans       &kp N        &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-&kp LCTRL        &kp LWIN  &kp LEFT_ALT  &kp PRINTSCREEN  &mkp RCLK  &lt 5 BACKSPACE  &mkp LCLK  &lt 3 ENTER  &lt 2 SPACE                              &trans    &trans
+&kp ESC         &kp N1    &kp N2        &kp N3           &kp N4  &kp N5                                 &kp N6       &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB         &kp Q     &kp W         &kp E            &kp R   &kp T                                  &kp Y        &kp U   &kp I      &kp O    &kp P          &kp BACKSLASH
+&kp GRAVE       &kp A     &kp S         &kp D            &kp F   &kp G                                  &kp H        &kp J   &kp K      &kp L    &kp SEMI       &kp SQT
+&kp LEFT_SHIFT  &kp Z     &kp X         &kp C            &kp V   &kp B          &kp LSHFT  &mo 1        &kp N        &kp M   &kp COMMA  &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
+&kp LCTRL       &kp LWIN  &kp LEFT_ALT  &kp PRINTSCREEN  &mo 6   &kp BACKSPACE  &mo 4      &lt 3 ENTER  &lt 2 SPACE                              &kp RIGHT_ALT  &kp RCTRL
             >;
         };
 
         number_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans                     &trans     &trans     &trans     &trans          &trans             &trans
+&trans  &trans     &kp LC(W)  &trans     &kp LC(R)  &kp LC(T)                  &kp LC(Y)  &kp LC(U)  &kp LC(I)  &kp LC(O)       &kp LC(P)          &trans
+&trans  &kp LC(A)  &kp LC(S)  &trans     &kp LC(F)  &trans                     &trans     &trans     &kp LC(K)  &trans          &kp LC(SEMICOLON)  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans  &trans  &trans     &trans     &trans     &kp LC(PERIOD)  &trans             &trans
+&trans  &trans     &trans     &trans     &trans     &trans     &trans  &trans  &trans                                           &trans             &trans
             >;
 
             label = "NUM";
@@ -65,16 +65,27 @@
         function_layer {
             label = "FUN";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F7   &kp F8   &kp F9   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F4   &kp F5   &kp F6   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F1   &kp F2   &kp F3   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                             &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans   &trans
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MCLK  &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK                          &trans  &trans
+            >;
+        };
+
+        scroll_layer {
+            label = "SCROLL";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -84,23 +95,12 @@
             >;
         };
 
-        scroll_layer {
-            label = "SCROLL";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &kp FSLH  &kp STAR  &kp MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &kp N7  &kp N8    &kp N9    &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans  &kp N4  &kp N5    &kp N6    &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans  &kp N1  &kp N2    &kp N3    &kp RET    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RET  &kp N0                              &trans     &trans
-            >;
-        };
-
         snipe_layer {
             label = "SNIPE";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans                &trans     &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp TILDE  &kp LEFT_BRACE        &kp EQUAL  &kp RIGHT_BRACE        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp TILDE  &kp LEFT_BRACE        &kp PLUS   &kp RIGHT_BRACE        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp GRAVE  &kp LEFT_PARENTHESIS  &kp EQUAL  &kp RIGHT_PARENTHESIS  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &kp LEFT_BRACKET      &trans     &kp RIGHT_BRACKET      &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                             &trans  &trans
             >;
